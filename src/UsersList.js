@@ -56,9 +56,14 @@ export default class Users extends Component {
                   <View style={{alignItems:"center", justifyContent:"center"}}>
                     <Text style={styles.name}>{item.name}</Text>
                     <Text style={styles.position}>{item.position}</Text>
+                    <View style={{flexDirection:'row', justifyContent:'space-between'}}>
                     <TouchableOpacity style={styles.followButton} onPress={()=> this.clickEventListener(item)}>
-                      <Text style={styles.followButtonText}>Follow</Text>  
+                      <Text style={styles.followButtonText}>Accept </Text>  
                     </TouchableOpacity>
+                    <TouchableOpacity style={styles.followButton} onPress={()=> this.clickEventListener(item)}>
+                      <Text style={styles.followButtonText}>Reject </Text>  
+                    </TouchableOpacity>
+                    </View>
                   </View>
                 </View>
               </TouchableOpacity>
